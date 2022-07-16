@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as var;
+@use "../base/typography" as fonts;
+@use "../components/media";
+
+#contact {
+  padding: 4rem 0;
+  background: radial-gradient(
+    250.88% 493.35% at 0% 0%,
+    #17202a 0%,
+    #1e6b9e 65.62%,
+    #2b85c0 100%
+  );
+
+  & h4 {
+    font-size: clamp(1.25rem, 4vw, 3rem);
+    font-weight: map-get(fonts.$font-weight, light);
+    text-align: center;
+    color: var.$secondary-color;
+  }
+
+  & h1 {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-bottom: clamp(1rem, 5vw, 3.5rem);
+    font-size: clamp(1.4rem, 6vw, 6rem);
+    font-weight: map-get(fonts.$font-weight, medium);
+    text-align: center;
+    word-wrap: break-word;
+    letter-spacing: -0.075em;
+
+    & a {
+      color: var.$body-color;
+      transition: color 0.3s ease-out;
+
+      &:hover {
+        color: var.$accent-color;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 5px solid var.$accent-color;
+      transform: scale(0, 1);
+      transform-origin: left;
+      transition: transform 1.5s ease-out;
+    }
+    &[data-scroll="in"]::after {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+@include media.large-phones {
+  #contact h1::after {
+    border-bottom-width: 2px;
+  }
+}
+
+@media (hover: none) {
+  #contact h1 a {
+    color: var.$body-color;
+  }
+}

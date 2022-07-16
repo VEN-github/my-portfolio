@@ -1,0 +1,142 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables" as var;
+@use "../base/typography" as fonts;
+@use "../components/media";
+
+#about {
+  margin-bottom: 5rem;
+  & .profile {
+    @include mixins.flex(center, center);
+    margin-bottom: clamp(1.5rem, 8vw, 8rem);
+    & img {
+      width: 400px;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-right: 4rem;
+    }
+
+    & .details {
+      & p {
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        font-weight: map-get(fonts.$font-weight, light);
+        color: var.$text-color-dark;
+        line-height: 42px;
+
+        & span {
+          display: block;
+        }
+      }
+
+      & a {
+        font-weight: map-get(fonts.$font-weight, medium);
+      }
+    }
+  }
+
+  & .skills {
+    margin-bottom: clamp(1.5rem, 8vw, 5rem);
+    & h2 {
+      margin-bottom: 1rem;
+      font-size: clamp(1.5rem, 6vw, 3rem);
+      font-weight: map-get(fonts.$font-weight, medium);
+      white-space: nowrap;
+      color: var.$text-color-dark;
+    }
+
+    & p {
+      font-size: clamp(1rem, 5vw, 2rem);
+      font-weight: map-get(fonts.$font-weight, light);
+      color: var.$text-color-dark;
+      line-height: 42px;
+
+      & span {
+        display: block;
+      }
+    }
+  }
+
+  & .awards {
+    & h2 {
+      margin-bottom: 1rem;
+      font-size: clamp(1.25rem, 6vw, 3rem);
+      font-weight: map-get(fonts.$font-weight, medium);
+      color: var.$text-color-dark;
+    }
+
+    & .awards-link {
+      list-style-type: none;
+
+      & li {
+        & a {
+          font-size: clamp(1rem, 5vw, 2rem);
+          font-weight: map-get(fonts.$font-weight, light);
+          color: var.$text-color-dark;
+          transition: color 0.3s ease-out;
+
+          &:hover {
+            color: var.$primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media.laptops {
+  #about .profile {
+    flex-wrap: wrap;
+    & img {
+      width: 350px;
+      margin-bottom: 1.5rem;
+    }
+
+    & .details p {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+@include media.tablets {
+  #about .profile {
+    & img {
+      margin-right: 0;
+    }
+
+    & .details p {
+      font-size: 1.563rem;
+    }
+  }
+
+  #about .skills p {
+    line-height: normal;
+
+    & span {
+      display: inline;
+    }
+  }
+}
+
+@include media.large-phones {
+  #about .profile {
+    & img {
+      width: 280px;
+    }
+
+    & .details p {
+      font-size: 1.125rem;
+      line-height: normal;
+
+      & span {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  #about .awards .awards-link li a {
+    color: var.$text-color-dark;
+  }
+}

@@ -1,0 +1,91 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables" as var;
+@use "../base/typography" as fonts;
+@use "../components/media";
+
+#footer {
+  width: 100%;
+  & .flex-footer {
+    @include mixins.flex(space-between, center);
+    font-family: map-get(fonts.$font-stack, logo-font);
+
+    & .copyright {
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      font-weight: map-get(fonts.$font-weight, light);
+      letter-spacing: -1.2px;
+      color: var.$body-color;
+
+      & span {
+        font-style: italic;
+      }
+    }
+
+    & .social-links {
+      display: flex;
+      font-size: clamp(1rem, 4vw, 1.25rem);
+      font-weight: map-get(fonts.$font-weight, light);
+      letter-spacing: -1.2px;
+      color: var.$body-color;
+
+      & li {
+        transition: color 0.3s ease-out;
+
+        & a {
+          color: var.$body-color;
+          transition: color 0.3s ease-out;
+
+          &:hover {
+            color: var.$accent-color;
+          }
+        }
+
+        &:hover {
+          color: var.$accent-color;
+        }
+      }
+
+      & li:not(:last-child) {
+        padding-right: 2rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@include media.tablets {
+  #footer .flex-footer {
+    flex-direction: column-reverse;
+
+    & .social-links {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@include media.large-phones {
+  #footer {
+    & .flex-footer {
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      & .social-links {
+        display: block;
+        margin-left: 1.5rem;
+
+        & li {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  #footer .flex-footer .social-links li {
+    color: var.$body-color;
+
+    & a {
+      color: var.$body-color;
+    }
+  }
+}

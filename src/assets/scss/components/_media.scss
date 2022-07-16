@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as var;
+
+@mixin desktops {
+  @media screen and (min-width: var.$ultra-large-screen) {
+    @content;
+  }
+}
+
+@mixin large-laptops {
+  @media screen and (max-width: var.$extra-large-screen) {
+    @content;
+  }
+}
+
+@mixin laptops {
+  @media screen and (max-width: var.$large-screen) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: var.$medium-screen) {
+    @content;
+  }
+}
+
+@mixin large-phones {
+  @media screen and (max-width: var.$small-screen) {
+    @content;
+  }
+}
+
+@mixin small-phones {
+  @media screen and (max-width: var.$extra-small-screen) {
+    @content;
+  }
+}
+
+@mixin extra-small-phones {
+  @media screen and (max-width: var.$ultra-small-screen) {
+    @content;
+  }
+}

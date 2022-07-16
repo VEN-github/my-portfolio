@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@300;400;500;600&display=swap");
+
+$font-stack: (
+  "main-font": (
+    "Work Sans",
+    sans-serif,
+  ),
+  "logo-font": (
+    "Montserrat",
+    sans-serif,
+  ),
+);
+
+$font-weight: (
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+);

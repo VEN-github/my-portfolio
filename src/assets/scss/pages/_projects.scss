@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+@use "../base/typography" as font;
+@use "../components/media";
+
+#projects {
+  margin: 3rem 0;
+  & .project {
+    margin-bottom: 1.5rem;
+    & img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 1.75rem;
+      background: radial-gradient(
+        136.17% 288.39% at -14.09% -13.71%,
+        #17202a 0%,
+        #1e6b9e 71.35%,
+        #2b85c0 100%
+      );
+      border-radius: 5px;
+    }
+
+    & .project-title {
+      font-size: clamp(1.125rem, 6vw, 3rem);
+      font-weight: map-get(font.$font-weight, regular);
+      white-space: nowrap;
+      color: var.$text-color-dark;
+    }
+
+    & .project-desc {
+      margin-bottom: clamp(0.5rem, 4vw, 1.5rem);
+      font-size: clamp(0.938rem, 4vw, 1.5rem);
+      font-weight: map-get(font.$font-weight, light);
+      line-height: 32px;
+      color: var.$text-color-dark;
+
+      & span {
+        display: block;
+      }
+    }
+
+    & .contributions {
+      margin-bottom: 2rem;
+      white-space: nowrap;
+      & span {
+        padding: 0.5em 1em;
+        font-size: clamp(0.64rem, 2vw, 0.9rem);
+        font-weight: map-get(font.$font-weight, regular);
+        text-transform: uppercase;
+        white-space: nowrap;
+        background-color: var.$secondary-color;
+        color: var.$text-color-dark;
+        border-radius: 20px;
+      }
+
+      & span:nth-child(2) {
+        margin: 0 0.3rem;
+      }
+    }
+
+    & .project-links {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      & a:first-child {
+        margin-right: 4rem;
+      }
+    }
+  }
+}
+
+@include media.tablets {
+  #projects .project .project-desc span {
+    display: inline;
+  }
+}
+
+@include media.large-phones {
+  #projects .project {
+    & .project-desc {
+      line-height: normal;
+    }
+
+    & .project-links {
+      @include mixins.flex(center, center);
+      flex-direction: column;
+
+      & a:first-child {
+        margin-right: 0;
+        margin-bottom: 1.2rem;
+      }
+
+      & a i {
+        font-size: 1rem;
+      }
+    }
+  }
+}

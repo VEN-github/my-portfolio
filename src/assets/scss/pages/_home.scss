@@ -1,0 +1,204 @@
+@use "../abstracts/variables" as var;
+@use "../base/typography" as font;
+@use "../components/media";
+
+#index {
+  position: relative;
+  padding-top: var(--scroll-padding, 50px);
+  min-height: 100vh;
+  background: radial-gradient(
+    250.88% 493.35% at 0% 0%,
+    #17202a 0%,
+    #1e6b9e 65.62%,
+    #2b85c0 100%
+  );
+
+  & h4 {
+    font-size: clamp(0.8rem, 3.5vw, 1.85rem);
+    font-weight: map-get(font.$font-weight, light);
+    color: var.$text-color-light;
+    letter-spacing: -0.07em;
+  }
+
+  & h1 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: map-get(font.$font-weight, semi-bold);
+    color: var.$secondary-color;
+    line-height: clamp(34px, 8vw, 84px);
+    letter-spacing: -0.07em;
+
+    & span {
+      display: block;
+    }
+  }
+
+  & p {
+    margin-bottom: 2.2rem;
+    font-size: clamp(1.125rem, 4vw, 2rem);
+    font-weight: map-get(font.$font-weight, regular);
+    color: var.$text-color-light;
+    line-height: clamp(22px, 4vw, 42px);
+
+    & span {
+      display: block;
+    }
+  }
+
+  & .mail-icon {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+    color: var.$text-color-dark;
+  }
+
+  & svg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 630px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+#context {
+  animation: context 1s linear infinite both;
+}
+
+#man {
+  animation: man 3s linear infinite;
+}
+
+@keyframes man {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  41.99% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  43.01% {
+    opacity: 1;
+  }
+  45.99% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 0;
+  }
+  46.9% {
+    opacity: 0;
+  }
+  46.91% {
+    opacity: 1;
+  }
+  51.99% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+  52.8% {
+    opacity: 0;
+  }
+  52.81% {
+    opacity: 1;
+  }
+}
+
+@keyframes context {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@include media.desktops {
+  #index {
+    padding-top: 20rem;
+
+    & svg {
+      width: 1300px;
+    }
+  }
+}
+
+@include media.large-laptops {
+  #index {
+    & svg {
+      width: 600px;
+    }
+  }
+}
+
+@include media.laptops {
+  #index {
+    & .mail-icon {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@include media.tablets {
+  #index {
+    & p {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@include media.large-phones {
+  #index {
+    padding-top: 6.5rem;
+
+    & svg {
+      opacity: 0.7;
+    }
+  }
+}
+
+@include media.small-phones {
+  #index {
+    & svg {
+      opacity: 1;
+    }
+  }
+}
+
+@include media.extra-small-phones {
+  #index {
+    & h1 {
+      font-size: 1.75rem;
+    }
+
+    & svg {
+      width: 300px;
+      opacity: 0.3;
+    }
+
+    & .mail-icon {
+      font-size: 0.875rem;
+    }
+  }
+}

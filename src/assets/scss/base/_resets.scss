@@ -1,0 +1,102 @@
+@use "./typography" as fonts;
+@use "../abstracts/variables" as var;
+@use "../components/media";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  @extend *;
+}
+
+*::after {
+  @extend *;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 50px);
+}
+
+body {
+  font-family: map-get(fonts.$font-stack, main-font);
+  background-color: var.$body-color;
+  line-height: 1.6;
+  user-select: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.header-bg {
+  background: radial-gradient(
+    250.88% 493.35% at 0% 0%,
+    #17202a 0%,
+    #1e6b9e 65.62%,
+    #2b85c0 100%
+  );
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: clamp(1.25rem, 8vw, 3.5rem);
+  font-size: clamp(1.563rem, 7vw, 3.5rem);
+  font-weight: map-get(fonts.$font-weight, medium);
+  color: var.$text-color-dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 5px solid var.$primary-color;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 1.8s ease-out;
+  }
+
+  &[data-scroll="in"]::after {
+    transform: scale(1, 1);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var.$text-color-dark;
+  border-radius: 100vw;
+}
+
+@include media.large-phones {
+  .section-title::after {
+    border-bottom-width: 2px;
+  }
+}
