@@ -11,6 +11,15 @@ const app = () => {
 
 app();
 
+// google analytics
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'G-0ENZ447MHY');
+
 // Declaring variables
 const header = document.querySelector('#header');
 const hamburger = document.querySelector('.hamburger');

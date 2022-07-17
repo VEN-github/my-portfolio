@@ -159,7 +159,7 @@ const Main = () => {
   <div class="project">
     <img loading="lazy" data-sal="zoom-out" data-sal-duration="1200" data-sal-delay="300" data-sal-easing="ease-out-bounce" src="${mockupProj1}" alt="Mockup for INVI Clothing Co. Project"/>
     <h3 data-sal="slide-right" data-sal-duration="800" data-sal-delay="300" data-sal-easing="ease-out-bounce" class="project-title">INVI Clothing Co. Web Store</h3>
-    <p data-sal="fade" data-sal-duration="1000" data-sal-delay="500" data-sal-easing="ease-out-bounce" class="project-desc"><span>A web based application for INVI Clothing Co. with online</span><span>ordering system, sales monitoring and inventory management.</span></p>
+    <p data-sal="fade" data-sal-duration="1000" data-sal-delay="500" data-sal-easing="ease-out-bounce" class="project-desc"><span>A web based application for INVI Clothing Co. with online </span><span>ordering system, sales monitoring and inventory management.</span></p>
     <div class="contributions">
       <span data-sal="slide-up" data-sal-duration="600" data-sal-delay="600" data-sal-easing="ease-out-bounce">UI Design</span>
       <span data-sal="slide-up" data-sal-duration="800" data-sal-delay="800" data-sal-easing="ease-out-bounce">Web Design</span>
@@ -176,7 +176,7 @@ const Main = () => {
   <div class="project">
     <img loading="lazy" data-sal="zoom-out" data-sal-duration="1200" data-sal-delay="300" data-sal-easing="ease-out-bounce" src="${mockupProj2}" alt="Mockup for Face Recognition App"/>
     <h3 data-sal="slide-right" data-sal-duration="800" data-sal-delay="300" data-sal-easing="ease-out-bounce" class="project-title">Face Recognition Application</h3>
-    <p data-sal="fade" data-sal-duration="1000" data-sal-delay="500" data-sal-easing="ease-out-bounce" class="project-desc"><span>Simple face recognition application</span><span>with QR code generator and scanner.</span></p>
+    <p data-sal="fade" data-sal-duration="1000" data-sal-delay="500" data-sal-easing="ease-out-bounce" class="project-desc"><span>Simple face recognition application </span><span>with QR code generator and scanner.</span></p>
     <div class="contributions">
       <span data-sal="slide-up" data-sal-duration="600" data-sal-delay="600" data-sal-easing="ease-out-bounce">UI Design</span>
       <span data-sal="slide-up" data-sal-duration="800" data-sal-delay="800" data-sal-easing="ease-out-bounce">Web Design</span>
@@ -205,8 +205,8 @@ const Main = () => {
       <div class="profile">
         <img loading="lazy" data-sal="zoom-out" data-sal-duration="1200" data-sal-delay="300" data-sal-easing="ease-in-out-cubic" src="${DisplayPic}" alt="My Display Picture"/>
         <div class="details">
-          <p data-sal="slide-up" data-sal-duration="500" data-sal-delay="500" data-sal-easing="ease-out-bounce"><span>I’m Raven Barrogo, a creative front-end</span><span>developer based in the Philippines. It's my</span><span>passion to create, design, and develop</span><span>stunning projects.</span></p>
-          <p data-sal="slide-up" data-sal-duration="600" data-sal-delay="700" data-sal-easing="ease-out-bounce"><span> I am always looking for new ways to</span><span>improve my skills and knowledge to come</span><span>up with the latest solutions/best practices.</span></p>
+          <p data-sal="slide-up" data-sal-duration="500" data-sal-delay="500" data-sal-easing="ease-out-bounce"><span>I’m Raven Barrogo, a creative front-end </span><span>developer based in the Philippines. It's my </span><span>passion to create, design, and develop </span><span>stunning projects.</span></p>
+          <p data-sal="slide-up" data-sal-duration="600" data-sal-delay="700" data-sal-easing="ease-out-bounce"><span> I am always looking for new ways to </span><span>improve my skills and knowledge to come </span><span>up with the latest solutions/best practices.</span></p>
           <a data-sal="slide-up" data-sal-duration="700" data-sal-delay="900" data-sal-easing="ease-out-bounce" href="${Resume}" download target="_blank" rel="noopener noreferrer" class="btn-link"><span>Download Resume</span><i class="bx bx-cloud-download"></i
           ></a>
         </div>
