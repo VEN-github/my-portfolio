@@ -4,7 +4,6 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: {
     main: path.resolve(__dirname, 'src/index.js'),
   },
@@ -29,7 +28,19 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['autoprefixer']],
+              },
+            },
+          },
+          'sass-loader',
+        ],
       },
       {
         test: /\.js$/,
@@ -48,7 +59,6 @@ module.exports = {
     ],
   },
   optimization: {
-    minimize: true,
     minimizer: [
       new ImageMinimizerPlugin({
         minimizer: {
