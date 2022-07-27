@@ -213,7 +213,7 @@ const Main = () => {
       </div>
       <div data-sal="slide-up" data-sal-duration="400" data-sal-delay="300" data-sal-easing="ease-out-bounce" class="skills">
         <h2>Skills and Technologies</h2>
-        <p><span>HTML5, CSS3, SCSS, JavaScript (ES6+), Gulp JS, Webpack 5, </span><span>Git, Visual Studio Code, Figma</span></p>
+        <p><span>HTML5, CSS3, SCSS, JavaScript (ES6+), Gulp JS, Webpack 5, </span><span>Bootstrap 5, TailwindCSS, Figma, </span><span>Git, npm, Visual Studio Code</span></p>
       </div>
       <div data-sal="slide-up" data-sal-duration="600" data-sal-delay="500" data-sal-easing="ease-out-bounce" class="awards">
         <h2>Awards and Recognition</h2>
