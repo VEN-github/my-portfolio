@@ -9,7 +9,7 @@ const Footer = () => {
         <ul class="social-links">
           <li><a href="https://www.linkedin.com/in/raven-barrogo" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
           <li><a href="https://github.com/VEN-github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://codepen.io/your-work" target="_blank" rel="noopener noreferrer">CodePen</a></li>
+          <li><a href="https://codepen.io/ravenbarrogo" target="_blank" rel="noopener noreferrer">CodePen</a></li>
         </ul>
       </div>
     </div>

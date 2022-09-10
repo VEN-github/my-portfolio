@@ -2,7 +2,6 @@ import mockupProj1 from '../../../assets/images/inviclothing-mockup.png';
 import mockupProj2 from '../../../assets/images/face-recognition-mockup.png';
 import DisplayPic from '../../../assets/images/display-picture.png';
 import Resume from '../../../assets/upload/Raven Barrogo - Resume.pdf';
-import JSCert from '../../../assets/images/JavaScript Certificate - Sololearn.png';
 import Footer from '../footer/Footer';
 
 const Main = () => {
@@ -213,13 +212,13 @@ const Main = () => {
       </div>
       <div data-sal="slide-up" data-sal-duration="400" data-sal-delay="300" data-sal-easing="ease-out-bounce" class="skills">
         <h2>Skills and Technologies</h2>
-        <p><span>HTML5, CSS3, SCSS, JavaScript (ES6+), Gulp JS, Webpack 5, </span><span>Bootstrap 5, TailwindCSS, Figma, </span><span>Git, npm, Visual Studio Code</span></p>
+        <p><span>HTML5, CSS3, SCSS, JavaScript (ES6+), Gulp.js, Webpack 5, </span><span>Vue.js, Bootstrap 5, Tailwind CSS, Figma, </span><span>Git, npm, Visual Studio Code</span></p>
       </div>
       <div data-sal="slide-up" data-sal-duration="600" data-sal-delay="500" data-sal-easing="ease-out-bounce" class="awards">
         <h2>Awards and Recognition</h2>
         <ul class="awards-link">
           <li><a href="https://www.freecodecamp.org/certification/ravenbarrogs/responsive-web-design" target="_blank" rel="noopener noreferrer">Responsive Web Design - freeCodeCamp</a></li>
-          <li><a href="${JSCert}" target="_blank" rel="noopener noreferrer">JavaScript Course - Sololearn</a></li>
+          <li><a href="https://www.sololearn.com/certificates/CT-LHGTRATB" target="_blank" rel="noopener noreferrer">JavaScript Course - Sololearn</a></li>
         </ul>
       </div>
     </div>
