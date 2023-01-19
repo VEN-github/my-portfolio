@@ -165,7 +165,7 @@ const Main = () => {
       <span data-sal="slide-up" data-sal-duration="1000" data-sal-delay="1000" data-sal-easing="ease-out-bounce">Development</span>
     </div>
     <div data-sal="zoom-out" data-sal-duration="800" data-sal-delay="800" data-sal-easing="ease-in-out-cubic" class="project-links">
-      <a href="https://inviclothingco.herokuapp.com/" target="_blank" class="btn-link"><span>Visit Live Website</span><i class="bx bx-link-external"></i></a>
+      <a href="http://inviclothingco.epizy.com/" target="_blank" class="btn-link"><span>Visit Live Website</span><i class="bx bx-link-external"></i></a>
       <a href="https://github.com/VEN-github/invi-clothing-co-web-store" target="_blank" class="btn-link"><span>View on Github</span><i class="bx bxl-github"></i></a>
     </div>
   </div>
