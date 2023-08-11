@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/VEN-github/my-portfolio"
   },
   "keywords": [],
   "author": "Raven Barrogo",
