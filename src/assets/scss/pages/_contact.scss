@@ -26,10 +26,6 @@
     & a {
       color: var.$body-color;
       transition: color 0.3s ease-out;
-
-      &:hover {
-        color: var.$accent-color;
-      }
     }
 
     &::after {
@@ -55,14 +51,12 @@
   }
 }
 
-@media (hover: none) {
+@media (hover: hover) {
   #contact {
     & h1 {
       & a {
-        color: var.$body-color;
-
         &:hover {
-          color: var.$body-color;
+          color: var.$accent-color;
         }
       }
     }

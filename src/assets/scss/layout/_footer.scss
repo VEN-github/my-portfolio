@@ -33,14 +33,6 @@
         & a {
           color: var.$body-color;
           transition: color 0.3s ease-out;
-
-          &:hover {
-            color: var.$accent-color;
-          }
-        }
-
-        &:hover {
-          color: var.$accent-color;
         }
       }
 
@@ -80,21 +72,19 @@
   }
 }
 
-@media (hover: none) {
+@media (hover: hover) {
   #footer {
     & .flex-footer {
       & .social-links {
         & li {
           & a {
-            color: var.$body-color;
-
             &:hover {
-              color: var.$body-color;
+              color: var.$accent-color;
             }
           }
 
           &:hover {
-            color: var.$body-color;
+            color: var.$accent-color;
           }
         }
       }
