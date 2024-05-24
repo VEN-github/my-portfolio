@@ -4,7 +4,7 @@ const Header = () => {
   const template = `
   <header id="header" data-sal="slide-up" data-sal-duration="800" data-sal-easing="ease-out-back">
     <div class="container flex">
-      <a href="https://ravenbarrogo.me/" id="logo"><span>r</span><span>aven</span><span>b</span><span>arrogo</span></a>
+      <a href="https://ravenbarrogo.live/" id="logo"><span>r</span><span>aven</span><span>b</span><span>arrogo</span></a>
       <nav>
         <ul class="nav-links">
           <li><a href="#projects" class="nav-link">Projects</a></li>

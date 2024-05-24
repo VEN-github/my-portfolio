@@ -81,14 +81,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       meta: {
-        keywords:
-          'raven, barrogo, raven barrogo, portfolio, front-end developer, web designer',
-        title: 'Raven Barrogo | Front-End Developer',
+        keywords: 'raven, barrogo, raven barrogo, portfolio, front-end developer, web designer',
         description:
           "I’m Raven Barrogo, a creative front-end developer based in the Philippines. It's my passion to create, design, and develop stunning projects.",
         author: 'Raven Barrogo',
         opType: { property: 'og:type', content: 'website' },
-        ogUrl: { property: 'og:url', content: 'https://ravenbarrogo.me/' },
+        ogUrl: { property: 'og:url', content: 'https://ravenbarrogo.live/' },
         ogTitle: {
           property: 'og:title',
           content: 'Raven Barrogo | Front-End Developer',
