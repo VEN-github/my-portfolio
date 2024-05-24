@@ -1,6 +1,6 @@
-@use "../base/typography" as fonts;
-@use "../abstracts/variables" as var;
-@use "./media";
+@use '../base/typography' as fonts;
+@use '../abstracts/variables' as var;
+@use './media';
 
 .btn-outline-primary {
   position: relative;
@@ -59,7 +59,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -107,13 +107,35 @@
 }
 
 @media (hover: none) {
-  .btn-link::after {
-    border-bottom-width: 0;
+  .btn-primary {
+    &:hover {
+      transform: none;
+    }
   }
 
   .btn-outline-primary {
     color: var.$accent-color;
     box-shadow: inset 0 0 0 0 var.$secondary-color;
     border-color: var.$accent-color;
+
+    &:hover {
+      color: var.$accent-color;
+      box-shadow: inset 0 0 0 0 var.$secondary-color;
+      border-color: var.$accent-color;
+    }
+  }
+
+  .btn-link {
+    &::after {
+      border-bottom-width: 0;
+    }
+
+    &:hover::after {
+      transform: none;
+    }
+
+    &:hover i {
+      transform: none;
+    }
   }
 }
