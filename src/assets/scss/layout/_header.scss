@@ -42,15 +42,6 @@
     letter-spacing: -1em;
     transition: all 0.5s ease 0.5s;
   }
-
-  &:hover span:nth-child(1) {
-    margin-right: 0;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-  }
-
-  &:hover span:nth-child(even) {
-    letter-spacing: -0.03em;
-  }
 }
 
 .nav-links {
@@ -76,15 +67,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    border-bottom: 2px solid var.$body-color;
     transform: scale(0, 1);
     transform-origin: right;
     transition: transform 0.3s ease-out;
-  }
-
-  &:hover::after {
-    transform: scale(1, 1);
-    transform-origin: left;
   }
 
   &.nav-active::after {
@@ -104,12 +89,7 @@
     width: 100%;
     height: 100vh;
     padding: 8rem 0;
-    background: radial-gradient(
-      250.88% 493.35% at 0% 0%,
-      #17202a 0%,
-      #1e6b9e 65.62%,
-      #2b85c0 100%
-    );
+    background: radial-gradient(250.88% 493.35% at 0% 0%, #17202a 0%, #1e6b9e 65.62%, #2b85c0 100%);
     clip-path: circle(100px at 100% -20%);
     transition: all 1s ease-in-out;
     pointer-events: none;
@@ -166,15 +146,26 @@
   }
 }
 
-@media (hover: none) {
-  .nav-link:not(.btn-outline-primary)::after {
-    border-bottom-width: 0;
+@media (hover: hover) {
+  .nav-link:not(.btn-outline-primary) {
+    &::after {
+      border-bottom: 2px solid var.$body-color;
+    }
+
+    &:hover::after {
+      transform: scale(1, 1);
+      transform-origin: left;
+    }
   }
 
-  #logo span:nth-child(1) {
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-  #logo span:nth-child(even) {
-    letter-spacing: -1em;
+  #logo {
+    &:hover span:nth-child(1) {
+      margin-right: 0;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+    &:hover span:nth-child(even) {
+      letter-spacing: -0.03em;
+    }
   }
 }

@@ -1,7 +1,7 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables" as var;
-@use "../base/typography" as fonts;
-@use "../components/media";
+@use '../abstracts/mixins';
+@use '../abstracts/variables' as var;
+@use '../base/typography' as fonts;
+@use '../components/media';
 
 #about {
   margin-bottom: 5rem;
@@ -74,10 +74,6 @@
           font-weight: map-get(fonts.$font-weight, light);
           color: var.$text-color-dark;
           transition: color 0.3s ease-out;
-
-          &:hover {
-            color: var.$primary-color;
-          }
         }
       }
     }
@@ -135,8 +131,18 @@
   }
 }
 
-@media (hover: none) {
-  #about .awards .awards-link li a {
-    color: var.$text-color-dark;
+@media (hover: hover) {
+  #about {
+    & .awards {
+      & .awards-link {
+        & li {
+          & a {
+            &:hover {
+              color: var.$primary-color;
+            }
+          }
+        }
+      }
+    }
   }
 }
