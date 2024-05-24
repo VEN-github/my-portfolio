@@ -1,7 +1,7 @@
 import mockupProj1 from '../../../assets/images/inviclothing-mockup.png';
 import mockupProj2 from '../../../assets/images/face-recognition-mockup.png';
 import DisplayPic from '../../../assets/images/display-picture.png';
-import Resume from '../../../assets/upload/Raven Barrogo - Resume.pdf';
+import Resume from '../../../assets/upload/raven-barrogo-resume.pdf';
 import Footer from '../footer/Footer';
 
 const Main = () => {

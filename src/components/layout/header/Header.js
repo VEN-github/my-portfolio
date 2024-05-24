@@ -1,4 +1,4 @@
-import Resume from '../../../assets/upload/Raven Barrogo - Resume.pdf';
+import Resume from '../../../assets/upload/raven-barrogo-resume.pdf';
 
 const Header = () => {
   const template = `
