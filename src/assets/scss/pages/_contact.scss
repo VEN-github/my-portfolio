@@ -1,15 +1,10 @@
-@use "../abstracts/variables" as var;
-@use "../base/typography" as fonts;
-@use "../components/media";
+@use '../abstracts/variables' as var;
+@use '../base/typography' as fonts;
+@use '../components/media';
 
 #contact {
   padding: 4rem 0;
-  background: radial-gradient(
-    250.88% 493.35% at 0% 0%,
-    #17202a 0%,
-    #1e6b9e 65.62%,
-    #2b85c0 100%
-  );
+  background: radial-gradient(250.88% 493.35% at 0% 0%, #17202a 0%, #1e6b9e 65.62%, #2b85c0 100%);
 
   & h4 {
     font-size: clamp(1.25rem, 4vw, 3rem);
@@ -38,7 +33,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
@@ -48,7 +43,7 @@
       transform-origin: left;
       transition: transform 1.5s ease-out;
     }
-    &[data-scroll="in"]::after {
+    &[data-scroll='in']::after {
       transform: scale(1, 1);
     }
   }
@@ -61,7 +56,15 @@
 }
 
 @media (hover: none) {
-  #contact h1 a {
-    color: var.$body-color;
+  #contact {
+    & h1 {
+      & a {
+        color: var.$body-color;
+
+        &:hover {
+          color: var.$body-color;
+        }
+      }
+    }
   }
 }

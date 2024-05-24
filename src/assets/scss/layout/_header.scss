@@ -104,12 +104,7 @@
     width: 100%;
     height: 100vh;
     padding: 8rem 0;
-    background: radial-gradient(
-      250.88% 493.35% at 0% 0%,
-      #17202a 0%,
-      #1e6b9e 65.62%,
-      #2b85c0 100%
-    );
+    background: radial-gradient(250.88% 493.35% at 0% 0%, #17202a 0%, #1e6b9e 65.62%, #2b85c0 100%);
     clip-path: circle(100px at 100% -20%);
     transition: all 1s ease-in-out;
     pointer-events: none;
@@ -167,14 +162,31 @@
 }
 
 @media (hover: none) {
-  .nav-link:not(.btn-outline-primary)::after {
-    border-bottom-width: 0;
+  .nav-link:not(.btn-outline-primary) {
+    &::after {
+      border-bottom-width: 0;
+    }
+
+    &:hover::after {
+      transform: none;
+    }
   }
 
-  #logo span:nth-child(1) {
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-  #logo span:nth-child(even) {
-    letter-spacing: -1em;
+  #logo {
+    & span:nth-child(1) {
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    & span:nth-child(even) {
+      letter-spacing: -1em;
+    }
+
+    &:hover span:nth-child(1) {
+      transform: none;
+    }
+
+    &:hover span:nth-child(even) {
+      letter-spacing: -1em;
+    }
   }
 }

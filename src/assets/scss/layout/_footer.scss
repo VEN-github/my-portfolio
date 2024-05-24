@@ -1,7 +1,7 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables" as var;
-@use "../base/typography" as fonts;
-@use "../components/media";
+@use '../abstracts/mixins';
+@use '../abstracts/variables' as var;
+@use '../base/typography' as fonts;
+@use '../components/media';
 
 #footer {
   width: 100%;
@@ -81,11 +81,23 @@
 }
 
 @media (hover: none) {
-  #footer .flex-footer .social-links li {
-    color: var.$body-color;
+  #footer {
+    & .flex-footer {
+      & .social-links {
+        & li {
+          & a {
+            color: var.$body-color;
 
-    & a {
-      color: var.$body-color;
+            &:hover {
+              color: var.$body-color;
+            }
+          }
+
+          &:hover {
+            color: var.$body-color;
+          }
+        }
+      }
     }
   }
 }

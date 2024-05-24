@@ -1,7 +1,7 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables" as var;
-@use "../base/typography" as fonts;
-@use "../components/media";
+@use '../abstracts/mixins';
+@use '../abstracts/variables' as var;
+@use '../base/typography' as fonts;
+@use '../components/media';
 
 #about {
   margin-bottom: 5rem;
@@ -136,7 +136,19 @@
 }
 
 @media (hover: none) {
-  #about .awards .awards-link li a {
-    color: var.$text-color-dark;
+  #about {
+    & .awards {
+      & .awards-link {
+        & li {
+          & a {
+            color: var.$text-color-dark;
+
+            &:hover {
+              color: var.$text-color-dark;
+            }
+          }
+        }
+      }
+    }
   }
 }
