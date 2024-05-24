@@ -161,6 +161,40 @@
   }
 }
 
+@include media.tablets {
+  #logo {
+    font-size: 2.25rem;
+
+    & span:nth-child(1) {
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    & span:nth-child(even) {
+      letter-spacing: -1em;
+    }
+
+    &:visited span:nth-child(1) {
+      transform: none;
+    }
+
+    &:focus span:nth-child(1) {
+      transform: none;
+    }
+
+    &:active span:nth-child(1) {
+      transform: none;
+    }
+
+    &:hover span:nth-child(1) {
+      transform: none;
+    }
+
+    &:hover span:nth-child(even) {
+      letter-spacing: -1em;
+    }
+  }
+}
+
 @media (hover: none) {
   .nav-link:not(.btn-outline-primary) {
     &::after {
