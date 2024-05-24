@@ -161,7 +161,7 @@
   }
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (hover: none) and (pointer: none) {
   .nav-link:not(.btn-outline-primary) {
     &::after {
       border-bottom-width: 0;
