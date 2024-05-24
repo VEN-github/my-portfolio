@@ -185,6 +185,10 @@
       transform: none;
     }
 
+    &:focus span:nth-child(1) {
+      transform: none;
+    }
+
     &:active span:nth-child(1) {
       transform: none;
     }
