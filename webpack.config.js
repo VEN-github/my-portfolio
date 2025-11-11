@@ -86,7 +86,7 @@ module.exports = {
           "I’m Raven Barrogo, a creative front-end developer based in the Philippines. It's my passion to create, design, and develop stunning projects.",
         author: 'Raven Barrogo',
         opType: { property: 'og:type', content: 'website' },
-        ogUrl: { property: 'og:url', content: 'https://ravenbarrogo.live/' },
+        ogUrl: { property: 'og:url', content: 'https://ravenbarrogo-v1.vercel.app/' },
         ogTitle: {
           property: 'og:title',
           content: 'Raven Barrogo | Front-End Developer',
